@@ -1,21 +1,20 @@
-### 📚 Book Sales & Ratings Analysis
 
-```markdown
-# Book Sales & Ratings Analysis 📖
+## Movie Recommendation System 🎥
 
 ## Description
-Analyzed 1,070 book records (spanning 560 BCE – 2016) to uncover publishing patterns, sales trends, and reader preferences.
+Built a content-based movie recommendation engine using NLP techniques to suggest similar movies.
 
 ## Role
-Cleaned and processed the dataset, built data models in Python (Pandas, Matplotlib, Seaborn), and visualized insights.
+Processed 4,803 movie records, engineered features, applied TF-IDF & Cosine Similarity, and created an interactive tool for recommendations.
 
 ## Technologies Used
 - Python
-- Pandas
-- Matplotlib, Seaborn
+- Pandas, Scikit-learn
+- TF-IDF Vectorizer, Cosine Similarity
+- ipywidgets for interactive input
 
 ## Outcome
-- Identified top authors across 4 genres from 735 authors.
-- Discovered long-term publishing and sales trends.
-- Provided insights into genre popularity and sales correlations.
-```
+- Generated top-10 personalized suggestions per query.
+- Processed 4,800+ titles, 2,349 directors, and 1,168 genre tags.
+- Delivered an interactive tool where users input a movie title and instantly get recommendations.
+
