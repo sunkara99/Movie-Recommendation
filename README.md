@@ -1,20 +1,65 @@
+# Movie Recommendation System (Content-Based Filtering with ML)
 
-## Movie Recommendation System 🎥
+## Executive Summary
 
-## Description
-Built a content-based movie recommendation engine using NLP techniques to suggest similar movies.
+This project builds a **content-based movie recommendation system** using natural language processing (NLP) and machine learning. By analyzing metadata like genres, keywords, cast, and director, the model recommends movies that are most similar to a given input.
 
-## Role
-Processed 4,803 movie records, engineered features, applied TF-IDF & Cosine Similarity, and created an interactive tool for recommendations.
+## Dataset
 
-## Technologies Used
-- Python
-- Pandas, Scikit-learn
-- TF-IDF Vectorizer, Cosine Similarity
-- ipywidgets for interactive input
+* **Source:** `movies.csv` (metadata for movies)
+* **Key Fields Used:** `genres`, `keywords`, `tagline`, `cast`, `director`
+* **Size:** Unknown (CSV not uploaded in repo yet)
 
-## Outcome
-- Generated top-10 personalized suggestions per query.
-- Processed 4,800+ titles, 2,349 directors, and 1,168 genre tags.
-- Delivered an interactive tool where users input a movie title and instantly get recommendations.
+---
+
+## Methodology
+
+1. **Data Preparation**
+
+   * Loaded movie dataset with Pandas.
+   * Selected relevant descriptive features.
+   * Handled missing values by replacing nulls with empty strings.
+   * Combined all features into a single textual field.
+
+2. **Feature Engineering**
+
+   * Applied **TF-IDF Vectorization** to transform text into numerical vectors.
+
+3. **Similarity Measurement**
+
+   * Calculated **Cosine Similarity** between movie vectors.
+   * Created a similarity matrix to find closest matches.
+
+4. **Recommendation Engine**
+
+   * User inputs a movie name.
+   * System finds the closest match using **difflib**.
+   * Returns the top N similar movies.
+
+---
+
+## Key Insights
+
+* Model leverages **metadata-based similarity** (content-based filtering).
+* No user ratings required — useful where collaborative filtering data is missing.
+* Recommendations adapt dynamically to input titles.
+
+---
+
+##  Skills Highlighted
+
+* **Python:** Pandas, NumPy, Scikit-learn
+* **NLP & Feature Engineering:** TF-IDF Vectorization
+* **Machine Learning:** Cosine Similarity for recommendations
+* **Data Cleaning & Preprocessing**
+* **Interactive Widgets (ipywidgets)** for user input in Jupyter
+
+---
+
+##  Next Steps
+
+* Add **ratings-based collaborative filtering** for hybrid recommendations.
+* Include **popularity-based ranking** for better relevance.
+* Deploy model via **Flask/Streamlit app** for user-friendly access.
+* Expand dataset to include more recent movies and richer metadata.
 
